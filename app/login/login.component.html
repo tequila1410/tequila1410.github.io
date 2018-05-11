@@ -1,0 +1,16 @@
+<section class="login text-center">
+  <form class="form-signin">
+    <img src="../../assets/img/sun.svg" alt="sun" class="app-logo">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input [(ngModel)]="email" name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input [(ngModel)]="pass" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button (click)="validateLogin()" class="btn btn-lg btn-primary btn-block">Sign in</button>
+  </form>
+</section>

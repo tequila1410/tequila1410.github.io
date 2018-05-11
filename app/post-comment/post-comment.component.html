@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+      <div class="card-body d-flex flex-column align-items-start">
+        <p style="width: 100%">
+          <b>{{comment.username}}</b>
+          <span style="float: right">#{{index}}</span>
+        </p>
+        <p *ngIf="!edit">{{comment.message}}</p>
+        <textarea [(ngModel)]="comment.message" *ngIf="edit" name="message" cols="60" rows="10">{{comment.message}}</textarea>
+      </div>
+    </div>
+  </div>
+  <button (click)="handleToggleEditComment()" style="height: 50px" type="button" class="btn btn-primary">{{edit ? 'Applay' : 'Edit'}}</button>
+  <button (click)="handleDeleteComment()" style="height: 50px" type="button" class="btn btn-danger">Delete</button>
+</div>
